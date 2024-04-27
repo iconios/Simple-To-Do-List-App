@@ -1,3 +1,3 @@
-#heading > input, h3, p {
-    display: inline-block;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
