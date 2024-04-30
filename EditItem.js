@@ -11,6 +11,9 @@ function EditItem(e) {
     if (editText == "") {
         alert("Item cannot be empty");
     }
+    else if(editText == null) {
+        listItem[id] = itemVal;
+    }
     else {
         listItem[id] = editText;
 
