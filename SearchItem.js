@@ -1,20 +1,22 @@
+function SearchItem() {
+    var searchVal = document.getElementById("search-input").value;
 
-let listItem = [];
+    if (searchVal.trim()) {
 
-function ClearSearch(){
-    //clear all previous data from the ordered list
-    document.getElementById("list-body").innerHTML = "";
+        let searchResult = listItem.filter(Search);
+        function Search(item) {
+            return (item.toLowerCase()).includes(searchVal.toLowerCase());
+        }
 
-    //Clear the search bar too
-    document.getElementById("search-input").value = "";
+        //clear all previous data from the ordered list
+        document.getElementById("list-body").innerHTML = "";
 
-    if (listItem.length){
         //display all user data (stored in array) in an ordered list
         let ordList = document.getElementById("list-body");
-        var userDataLen = listItem.length;
+        var userDataLen = searchResult.length;
         for (i = 0; i < userDataLen; i++) {
             let li = document.createElement("li");
-            li.textContent = listItem[i];
+            li.textContent = searchResult[i];
             li.setAttribute("class", "mx-4");
 
 
@@ -39,16 +41,12 @@ function ClearSearch(){
             li.appendChild(btnDel);
             ordList.appendChild(li);
         }
+
+    }
+    else if(!listItem.length){
+        alert("No user data to process")
     }
     else {
-        alert("Nothing to clear")
+        alert("No search item");
     }
-}
-
-function EditItem(){
-
-}
-
-function DeleteItem(){
-
 }

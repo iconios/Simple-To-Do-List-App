@@ -7,15 +7,17 @@
         <link rel="stylesheet" href="output.css">
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="AddItem.js"></script>
+        <script type="text/javascript" src="SearchItem.js"></script>
         <title>To Do List App</title>
     </head>
-    <body>
-        <div class="container mx-auto">
-            <div id="heading">
-                <input id ="add-input" type="button" onclick="AddItem()" value="Add Item" />
-                <h3>To Do List</h3>
-                <input id="search-input" type="search" placeholder="search..." />
-                <button id="search-button" onclick="SearchItem()">Search</button>
+    <body class="dark:bg-gray-900 dark:text-white text-gray-800">
+        <div class="container mx-auto px-1">
+            <div class="flex flex-wrap mb-3">
+                <h3 class="flex-none text-4xl m-3 text-center w-full font-bold">TO DO List</h3>
+                <input class="bg-green-500 rounded-xl px-3 mr-1 py-1 ml-3 flex-initial" id ="add-input" type="button" onclick="AddItem()" value="Add item" />
+                <input class="rounded-xl text-gray-600 flex-grow py-1 px-3" id="search-input" type="search" placeholder="search..." />
+                <button class="bg-blue-400 rounded-xl px-3 py-1 mx-1" id="search-button" onclick="SearchItem()">Search</button>
+                <button class="bg-red-600 rounded-xl px-3 py-1 mr-1" id="clear-button" onclick="ClearSearch()">X</button>
             </div>
             <div>
                 <ol id = "list-body">

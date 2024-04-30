@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#list-body {
+    list-style-type: decimal;
+    list-style-position: outside;
+}
