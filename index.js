@@ -1,2 +1,3 @@
 
 let listItem = [];
+let searchResult = [];
